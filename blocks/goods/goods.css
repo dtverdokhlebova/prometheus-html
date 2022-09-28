@@ -1,0 +1,279 @@
+.goods-filter {
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .goods-filter {
+    margin-bottom: 50px;
+  }
+}
+.goods-filter__open {
+  position: relative;
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  padding-left: 40px;
+  font: 20px/1.3 "Montserrat", "Arial", sans-serif;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .goods-filter__open {
+    display: block;
+  }
+}
+.goods-filter__open::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 28px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='25' viewBox='0 0 30 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.81818 24V15.0556M4.81818 9.94444V1M15 24V12.5M15 7.38889V1M25.1818 24V17.6111M25.1818 12.5V1M1 15.0556H8.63636M11.1818 7.38889H18.8182M21.3636 17.6111H29' stroke='%230C7E7F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .goods-filter__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px 25px;
+    background: #fff;
+    overflow-y: auto;
+  }
+}
+.goods-filter__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0c7e7f;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.930443 0.928932L15.0726 15.0711M0.930443 15.0711L15.0726 0.928932' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .goods-filter__close {
+    display: block;
+  }
+}
+.goods-filter__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .goods-filter__content {
+    display: block;
+  }
+}
+.goods-filter__item:not(:last-child) {
+  margin-right: 95px;
+}
+@media (max-width: 1259px) {
+  .goods-filter__item:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .goods-filter__item:not(:last-child) {
+    margin: 0 0 25px;
+  }
+}
+.goods-filter__submit {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .goods-filter__submit {
+    display: block;
+  }
+}
+.goods-filter__ui-range {
+  width: 270px;
+}
+@media (max-width: 767px) {
+  .goods-filter__ui-range {
+    width: 250px;
+  }
+}
+.goods-filter__title {
+  margin-bottom: 20px;
+  font: 20px/1.4 "Montserrat", "Arial", sans-serif;
+}
+@media (max-width: 767px) {
+  .goods-filter__title {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+}
+.goods-filter__choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.goods-filter__number:not(:last-child) {
+  margin-right: 10px;
+}
+.goods-filter__number input {
+  display: none;
+}
+.goods-filter__number input:checked + label {
+  color: #fff;
+  background: #0c7e7f;
+}
+.goods-filter__number label {
+  position: relative;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: block;
+  text-align: center;
+  width: 52px;
+  height: 52px;
+  font: 23px/52px "Montserrat", "Arial", sans-serif;
+  color: #0c7e7f;
+  border: 1px solid #0c7e7f;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.goods-filter__number label:hover {
+  color: #fff;
+  background: #0c7e7f;
+}
+@media (max-width: 767px) {
+  .goods-filter__number label {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+.goods-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 90px;
+}
+@media (max-width: 1520px) {
+  .goods-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+  }
+}
+@media (max-width: 1024px) {
+  .goods-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .goods-wrapper {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+.goods-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 19px -3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 19px -3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.goods-item__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 215px;
+  padding: 15px 10px;
+}
+.goods-item__img img {
+  max-height: 100%;
+}
+.goods-item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 10px 15px;
+  color: #fff;
+  background: #0c7e7f;
+}
+.goods-item__title {
+  font: 300 18px/1.2 "Montserrat", "Arial", sans-serif;
+  word-break: break-word;
+}
+.goods-item__area {
+  font: 600 18px/1.22 "Montserrat", "Arial", sans-serif;
+  white-space: nowrap;
+}
+.goods-item__foot {
+  margin-top: auto;
+  padding: 15px;
+  text-align: center;
+}
+.goods-more {
+  margin-top: 50px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .goods-more {
+    margin-top: 25px;
+  }
+}
+.goods-more__ui-button {
+  width: 100%;
+  max-width: 290px;
+  font-size: 17px;
+  border-radius: 9px;
+}
+.goods-popup__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.goods-popup__photo img {
+  max-height: 100%;
+}

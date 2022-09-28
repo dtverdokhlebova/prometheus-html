@@ -1,0 +1,82 @@
+.application {
+  display: grid;
+  grid-template-columns: 1fr 51%;
+  color: #1c1c1c;
+  background: #fff;
+}
+@media (max-width: 1259px) {
+  .application {
+    grid-template-columns: 1fr 40%;
+  }
+}
+@media (max-width: 767px) {
+  .application {
+    grid-template-columns: 1fr;
+    margin: 0 -16px;
+  }
+}
+.application__container {
+  padding: 50px 45px;
+}
+@media (max-width: 767px) {
+  .application__container {
+    padding: 30px 20px;
+  }
+}
+.application__form {
+  max-width: 510px;
+}
+.application__title {
+  margin-bottom: 20px;
+  font: 33px/1.1 "FoglihtenNo06", "Times New Roman", serif;
+}
+@media (max-width: 1259px) {
+  .application__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .application__title {
+    margin-bottom: 10px;
+    font-size: 21px;
+  }
+}
+.application__ui-input:not(:first-child) {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .application__ui-input:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+.application__ui-checkbox {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .application__ui-checkbox {
+    margin-top: 20px;
+  }
+}
+.application__button {
+  margin-top: 30px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .application__button {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .application__img {
+    height: 255px;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+.application__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
