@@ -12,10 +12,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 570px;
+  width: 1070px;
   height: 460px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 @media (max-width: 1259px) {
   .infrastructure__slide {
@@ -25,16 +25,27 @@
     flex-direction: column;
     width: 725px;
     height: auto;
-    -webkit-transition: unset;
-    transition: unset;
   }
 }
-.infrastructure__slide.swiper-slide-active {
-  width: 1070px;
+.infrastructure__slide:not(.swiper-slide-visible) {
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  .infrastructure__slide:not(.swiper-slide-visible) {
+    opacity: 1;
+  }
+}
+.infrastructure__slide.swiper-slide-active .infrastructure__info {
+  opacity: 1;
+}
+.infrastructure__slide.swiper-slide-prev .infrastructure__img {
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
 }
 @media (max-width: 1259px) {
-  .infrastructure__slide.swiper-slide-active {
-    width: 725px;
+  .infrastructure__slide.swiper-slide-prev .infrastructure__img {
+    -webkit-transform: none;
+    transform: none;
   }
 }
 .infrastructure__slide--kindergarten .infrastructure__aside {
@@ -57,6 +68,8 @@
   height: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 @media (max-width: 1259px) {
   .infrastructure__img {
@@ -137,11 +150,6 @@
   object-fit: contain;
 }
 .infrastructure__info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 500px;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,10 +161,9 @@
   -ms-flex-pack: center;
   justify-content: center;
   padding: 10px 25px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 @media (max-width: 1259px) {
   .infrastructure__info {
@@ -165,6 +172,7 @@
     height: auto;
     margin-top: 25px;
     padding: 0;
+    opacity: 1;
   }
 }
 .infrastructure__name {

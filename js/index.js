@@ -111,9 +111,8 @@ function infrastructure() {
       slidesPerView: 1,
       speed: 500,
       spaceBetween: 25,
-      centeredSlides: false,
-      slidesOffsetBefore: 0,
       autoHeight: true,
+      watchSlidesProgress: true,
       navigation: {
         nextEl: '.infrastructure__ui-slider-nav .ui-slider-nav__btn--next',
         prevEl: '.infrastructure__ui-slider-nav .ui-slider-nav__btn--prev'
@@ -124,13 +123,13 @@ function infrastructure() {
       },
       breakpoints: {
         767: {
-          slidesPerView: 'auto'
+          slidesPerView: 'auto',
+          centeredSlides: false
         },
         1259: {
           slidesPerView: 'auto',
           centeredSlides: true,
-          spaceBetween: 50,
-          slidesOffsetBefore: -250
+          spaceBetween: 50
         }
       }
     })
@@ -139,7 +138,6 @@ function infrastructure() {
     })
   }
 }
-
 function gallery() {
   if (document.querySelector('.gallery')) {
     const gallerySlider = new Swiper('.gallery__slider', {
